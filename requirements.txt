@@ -37,3 +37,4 @@ Unidecode==1.1.1
 urllib3==1.26.1
 Werkzeug==1.0.1
 zipp==3.4.0
+uwsgi
