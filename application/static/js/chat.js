@@ -54,7 +54,8 @@ $(document).ready(function() {
             input: getMessage,
         },
         type: 'POST',
-        url: 'http://127.0.0.1:5000/process',
+//        url: 'http://127.0.0.1:5000/process',
+        url: 'http://powerful-savannah-98354.herokuapp.com/process',
 
         beforeSend: function(){
           $("#loader").show();
