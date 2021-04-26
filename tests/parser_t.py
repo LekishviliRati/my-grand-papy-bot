@@ -4,8 +4,10 @@ Test of Input_parser class.
 
 from application.parser import Input_parser
 
-input_1 = " Peux-tu, m'indiquer l'adresse d'openlassrooms ? "
-input_2 = " Est-ce que tu connais l'addresse de la mairie de Paris ? "
+input_1 = \
+    " Peux-tu, m'indiquer l'adresse d'openlassrooms ? "
+input_2 = \
+    " Est-ce que tu connais l'addresse de la mairie de Paris ? "
 
 
 def test_input_1(input):
