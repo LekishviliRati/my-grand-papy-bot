@@ -55,7 +55,7 @@ $(document).ready(function() {
         },
         type: 'POST',
 //        url: 'https://127.0.0.1:5000/process',
-        url: 'https://my-grand-papy-bot.herokuapp.com/process',
+        url: 'https://powerful-savannah-98354.herokuapp.com/process',
 
         beforeSend: function(){
           $("#loader").show();
