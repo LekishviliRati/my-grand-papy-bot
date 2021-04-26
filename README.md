@@ -43,7 +43,7 @@ ___
 
 ### *User Journey* 😎
 
-- Click on website url : ...
+- Click on website url : https://powerful-savannah-98354.herokuapp.com/
 - Fill out the form field and submit it.
 - Submitted message is displayed in chatbox.
 - A spinner appears during loading period.
@@ -60,7 +60,7 @@ ___
 
 ### *Website*
 
--  enjoy ! 
+-  https://powerful-savannah-98354.herokuapp.com/
 
 
 ### *Requirements*

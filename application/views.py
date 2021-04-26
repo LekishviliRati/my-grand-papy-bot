@@ -1,4 +1,4 @@
-"""This file manages routes and views."""
+"""This file manage views."""
 
 from application import app
 from flask import request
