@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 """Configuration file."""
-
-from decouple import config
+import os
+# from decouple import config
 
 """
 Google Maps.
 """
 # API_KEY = config('API_KEY')
-API_KEY = "AIzaSyC0lfgQAaH7B2RCC6VOZbLr8REwvTo7i9g"
+# API_KEY = "AIzaSyC0lfgQAaH7B2RCC6VOZbLr8REwvTo7i9g"
+API_KEY = os.environ.get("API_KEY")
+
 
 """
 Wikimedia.
