@@ -51,7 +51,7 @@ ___
 - Google Map is updated.
 - User can start again the same process.
 
-### *Constraints* 😤
+### *Constraints*
 
 - Tests using mocks for APIs.
 - Test Driven Development.
