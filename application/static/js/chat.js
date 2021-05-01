@@ -1,4 +1,4 @@
-// Management of all JS script.
+// This file manages JS script.
 
 // Function to initialise map
 function initMap(latitude, longitude) {
@@ -30,23 +30,23 @@ $(document).ready(function() {
 	    // Avoid page reload
         event.preventDefault();
 
-    //get message
+    // Get message and avoid XSS
     let getMessage = $('input').val();
     let text = escapeHtml(getMessage)
 
-    // if message not empty
+    // If message not empty
     if(text !== '') {
 
-            //prepare message
+      // Prepare message
       let newMessage = "<p class='message'>" + text + " </p>";
 
-      // append the message to box
+      // Append the message to box
       $('.box .inner').append(newMessage);
 
-      // clear form field that was submitted
+      // Clear form field that was submitted
       $('Input').val("");
 
-//       move scroll to end after message submission
+      // Move scroll to end after message submission
       $('.box .inner').scrollTop( $('.box .inner')[0].scrollHeight );
 
       $.ajax({
@@ -54,7 +54,7 @@ $(document).ready(function() {
             input: getMessage,
         },
         type: 'POST',
-//        url: 'https://127.0.0.1:5000/process',
+        // url: 'https://127.0.0.1:5000/process',
         url: 'https://powerful-savannah-98354.herokuapp.com/process',
 
         beforeSend: function(){

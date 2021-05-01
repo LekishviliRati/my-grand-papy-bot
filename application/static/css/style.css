@@ -2,13 +2,14 @@ header{
   background-color: rgb(195,211,236);
 }
 
-/* Uses of Flexbox */
+/* Flexbox */
 #header{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+/* Flexbox */
 
 .papy_image{
   height: 20%;
@@ -84,11 +85,12 @@ body{
   margin-bottom: 20px;
 }
 
-/* Use of Flexbox */
+/* Flexbox */
 #footer_list{
   display: flex;
   justify-content: space-around;
 }
+/* Flexbox */
 
 #nameInput{
   margin:auto;
@@ -106,6 +108,11 @@ body{
     box-shadow: 5px 5px 5px #91C3FF;
     height: 30px;
     width: 100%;
+}
+
+#loader{
+  margin-left: 50%;
+  margin-right: 50%;
 }
 
 ul, li{

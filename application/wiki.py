@@ -47,9 +47,7 @@ class wiki_request:
                 }
 
                 return wiki_info
-
+            else:
+                return "query not found."
         else:
             return response.status_code, 'Not Found'
-
-# test = wiki_request(45.764043, 4.835659)
-# print(test.get_wiki_info(45.764043, 4.835659))

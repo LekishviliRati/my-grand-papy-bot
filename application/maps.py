@@ -35,19 +35,6 @@ class map_request:
                 self.longitude = \
                     response_data['results'][0]['geometry']['location']['lng']
             else:
-                return "Lenght response data = 0"
+                return "Length response data = 0"
         else:
             return response.status_code, ''
-
-
-# """ >> test """
-#
-# input = "Exemple de ville"
-#
-# instance = map_request(input)
-#
-# print("Latitude : ", instance.latitude)
-# print("Longitude : ", instance.longitude)
-#
-#
-# """ test << """

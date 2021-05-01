@@ -9,7 +9,7 @@ from application.maps import map_request
 from application.wiki import wiki_request
 
 
-@app.route("/")  # view function with route URL
+@app.route("/")
 @cross_origin(origin="*")
 def hello_world():
     return render_template("index.html")
