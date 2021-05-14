@@ -4,8 +4,8 @@ from application import app
 from flask import request
 from flask import render_template
 from flask_cors import cross_origin
-from application.parser import Input_parser
-from application.maps import map_request
+from application.parser import InputParser
+from application.maps import MapRequest
 from application.wiki import wiki_request
 
 
@@ -21,9 +21,9 @@ def index():
     if request.method == 'POST':
         input = request.form['input']
         if len(input) != 0:
-            parser = Input_parser(input)
+            parser = InputParser(input)
             # " parser.parsed_input " is the parsed input to use for map
-            map_coordinates = map_request(parser.parsed_input)
+            map_coordinates = MapRequest(parser.parsed_input)
             latitude = str(map_coordinates.latitude)
             longitude = str(map_coordinates.longitude)
             map_coords = {

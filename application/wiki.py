@@ -6,7 +6,7 @@ import requests
 from configuration import wiki_url
 
 
-class wiki_request:
+class WikiRequest:
     """
     This class will return a dictionary : wiki_info,
     from wikimedia with given coordinates (lat/lng).

@@ -7,7 +7,7 @@ from unidecode import unidecode
 from configuration.globals import STOPWORDS, PUNCTUATION
 
 
-class Input_parser:
+class InputParser:
     """This class will return parsed input."""
 
     def __init__(self, user_input):

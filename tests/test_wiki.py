@@ -1,7 +1,7 @@
 """Test of get_wiki_info() in wiki.py """
 
 import requests
-from application.wiki import wiki_request
+from application.wiki import WikiRequest
 from configuration import wiki_test_lg, wiki_test_lat
 
 
@@ -47,7 +47,7 @@ def test_of_get_description_from_wiki_info_success(monkeypatch):
 
         # Apply the monkeypatch for requests.get to mock_get_coordinates
         monkeypatch.setattr(requests, 'get', mock_get_wiki_infos)
-        instance_of_wiki_request = wiki_request()
+        instance_of_wiki_request = WikiRequest()
         test_request = \
             instance_of_wiki_request.get_wiki_info(wiki_test_lat, wiki_test_lg)
         assert test_request == expected_response
@@ -72,7 +72,7 @@ def test_get_response_failure(monkeypatch):
             return MockResponse()
 
         monkeypatch.setattr(requests, 'get', mock_get_coordinates)
-        instance_of_wiki = wiki_request()
+        instance_of_wiki = WikiRequest()
         test_req = instance_of_wiki.get_wiki_info(wiki_test_lat, wiki_test_lg)
 
         expected_failure_response = (404, 'Not Found')

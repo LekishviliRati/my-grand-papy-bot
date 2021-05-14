@@ -1,7 +1,7 @@
 """Test of maps.py class."""
 
 import requests
-from application.maps import map_request
+from application.maps import MapRequest
 
 
 def test_get_location_coordinates_success(monkeypatch):
@@ -40,7 +40,7 @@ def test_get_location_coordinates_success(monkeypatch):
 
         # Apply the monkeypatch for requests.get to mock_get_coordinates
         monkeypatch.setattr(requests, "get", mock_get_coordinates)
-        instance_of_map_request = map_request()
+        instance_of_map_request = MapRequest()
         assert (instance_of_map_request.latitude,
                 instance_of_map_request.longitude) \
                == ("Monkey_lat", "Monkey_lng")
@@ -66,5 +66,5 @@ def test_get_response_failure(monkeypatch):
             return MockResponse()
 
         monkeypatch.setattr(requests, 'get', mock_get_coordinates)
-        r = map_request()
+        r = MapRequest()
         assert (r.longitude, r.latitude) == (None, None)

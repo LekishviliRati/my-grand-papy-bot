@@ -2,7 +2,7 @@
 Test of Input_parser class.
 """
 
-from application.parser import Input_parser
+from application.parser import InputParser
 
 input_1 = \
     " Peux-tu, m'indiquer l'adresse d'openlassrooms ? "
@@ -12,11 +12,11 @@ input_2 = \
 
 def test_input_1():
     """Test of Input_parser class."""
-    parsed = Input_parser(input_1)
+    parsed = InputParser(input_1)
     assert parsed.parsed_input == "adresse openlassrooms"
 
 
 def test_input_2():
     """Test of Input_parser class."""
-    parsed = Input_parser(input_2)
+    parsed = InputParser(input_2)
     assert parsed.parsed_input == "addresse mairie paris"

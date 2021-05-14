@@ -7,7 +7,7 @@ import requests
 from configuration.globals import API_KEY
 
 
-class map_request:
+class MapRequest:
     """
     This class will return latitude and longitude,
     for user research.
