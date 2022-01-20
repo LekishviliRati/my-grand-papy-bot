@@ -6,7 +6,7 @@ from flask import render_template
 from flask_cors import cross_origin
 from application.parser import InputParser
 from application.maps import MapRequest
-from application.wiki import wiki_request
+from application.wiki import WikiRequest
 
 
 @app.route("/")
@@ -30,7 +30,7 @@ def index():
                 "latitude": latitude,
                 "longitude": longitude
             }
-            instance_wiki = wiki_request(latitude, longitude)
+            instance_wiki = WikiRequest(latitude, longitude)
             instance_wiki_description = \
                 instance_wiki.get_wiki_info(latitude, longitude)
             response = {
